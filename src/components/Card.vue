@@ -1,30 +1,22 @@
 <template>
   <div class="card">
-    <!-- @click="ctrlModal" -->
-    <span>{{title}}</span>
+    <span>{{data.title}}</span>
   </div>
 </template>
 
 <script>
-  import {defineComponent} from 'vue'
+  import { toRef, defineComponent } from 'vue'
 
   export default defineComponent({
 
-    props: ['title', 'id'],
+    props: ['post'],
 
-    emits: ['openModal'],
+    setup(props) {
 
-    setup(props, {emit}) {
-
-      let modal = false;
-
-      const ctrlModal = () => {
-        emit('openModal', props.id)
-      }
+      const data = toRef(props, 'post')
 
       return {
-        ctrlModal,
-        modal
+        data
       }
     }
   })

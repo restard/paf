@@ -1,6 +1,5 @@
 <template>
   <router-link to="/">HOME</router-link> | 
-  <router-link to="/news">News</router-link> | 
   <router-link to="/events">Events</router-link> | 
   <router-link to="/films">Films</router-link> | 
   <router-link to="/channel">Channel</router-link> | 
@@ -11,6 +10,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'App'
 }
